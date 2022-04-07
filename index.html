@@ -14,14 +14,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
     <link rel="manifest" href="./fav/site.webmanifest">
-
-    <!-- Javascript file link -->
-    <script src="./js/script.js"></script>
     
     <!-- Google's MDL -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-light_blue.min.css" /> 
-    <title>Area and Perimeter of a Trapezoid</title>
+    <title>Area of a Trapezoid</title>
   </head>
   <body>
     <!-- Google's MDL -->
@@ -31,21 +28,51 @@
     <!-- Container for web page content -->
     <main class = "mdl-layout__content" style = "padding-left:10px">
 
+      <!-- Page Header -->
+      <h1>Area and Perimeter of a Trapezoid</h1>
+
+      <!-- image wow -->
+      <img src="./images/trapezoidsmile.jpg">
+      
       <!-- text telling the user about the function of the program -->
       <p>This program will give you the area of a trapezoid. Try it out. </p>
 
-      <!-- Input fields for area and perimeter -->
+      <!-- Javascript function thing that makes it happen and first text field -->
+      <script src="./js/script.js"></script>
       <form action="javascript:calculateAreaClicked()">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="long-base">
-            <label class="mdl-textfield__label" for="long-base">The Longer of the two bases</label>
+            <label class="mdl-textfield__label" for="long-base">The Longer of the Two Bases</label>
             <span class="mdl-textfield__error">Input is not the longer of the two bases in numbers</span>
           </div>
-          <br>
-          <br>
-          
-          <!-- MDL Button to do the calculation thing -->
-          <button type="submit" onlick="calculateAreaClicked()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-            Calculate area
-          </button>
-        </form>
+        <br>
+            
+            <!-- Second text field -->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="short-base">
+            <label class="mdl-textfield__label" for="short-base">The Shorter of the Two Bases</label>
+            <span class="mdl-textfield__error">Input is not the shorter of the two bases in integers</span>
+            </div>
+        <br>
+              
+            <!-- Third text field -->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height">
+            <label class="mdl-textfield__label" for="height">The Height of the Trapezoid</label>
+            <span class="mdl-textfield__error">Input is not the height of the trapezoid in integers</span>
+          </div>
+        <br>
+      
+        <!-- MDL Button to do the calculation thing -->
+        <button type="submit" onlick="calculateAreaClicked()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+          Calculate area
+        </button>
+      </form>
+      <br>
+      
+      <!-- Div element to display the results -->
+      <div id="area"></div>
+    </main>
+    </div>
+  </body>
+</html>
