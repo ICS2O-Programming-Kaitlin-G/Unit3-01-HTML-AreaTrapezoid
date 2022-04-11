@@ -12,7 +12,7 @@ function calculateAreaClicked() {
   let height = parseInt(document.getElementById('height').value);
 
   //wow calculations
-  let area = (longBase * shortBase) / 2 * height;
+  let area = (longBase + shortBase) / 2 * height;
 
   // output dropper :)
   document.getElementById('area').innerHTML = 'the area of the trapezoid is ' + area.toFixed(2) + 'cm <sup>2</sup>';
